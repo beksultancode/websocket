@@ -38,7 +38,6 @@ class MyWebSocketHander implements WebSocketHandler {
         System.out.println("session.getHandshakeHeaders().get(\"name\") = " + session.getHandshakeHeaders().get("name"));
         log.info("New User Connected {}", session.getId());
     }
-
     @Override
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         var payload = (String) message.getPayload();
